@@ -53,118 +53,35 @@
     </div>
 </nav>
 
-<table class="table table-light" style="width: 100%">
-    <thead>
-    <tr>
-        <th>STT</th>
-        <th>Họ Và Tên</th>
-        <th>Ngày Sinh</th>
-        <th>Giới Tính</th>
-        <th>Số CNND</th>
-        <th>Số Điện Thoại</th>
-        <th>Email</th>
-        <th>Loại Khách</th>
-        <th>Địa Chỉ</th>
-        <th></th>
-        <th></th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Lê Văn A</td>
-        <td>11-02-2002</td>
-        <td>Nam</td>
-        <td>197252415</td>
-        <td>0964258741</td>
-        <td>levana@gmail.com</td>
-        <td>Diamond</td>
-        <td>Đà Nẵng</td>
-        <td>
-            <a href="#" class="btn btn-primary">Sửa</a>
-        </td>
-        <td>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Xóa
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Lê Văn B</td>
-        <td>11-02-2000</td>
-        <td>Nữ</td>
-        <td>197252415</td>
-        <td>0964258741</td>
-        <td>levanb@gmail.com</td>
-        <td>Platinium</td>
-        <td>Huế</td>
-        <td>
-            <a href="#" class="btn btn-primary">Sửa</a>
-        </td>
-        <td>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Xóa
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Lê Văn C</td>
-        <td>11-02-1997</td>
-        <td>Nam</td>
-        <td>197252415</td>
-        <td>0964258741</td>
-        <td>levanc@gmail.com</td>
-        <td>Gold</td>
-        <td>Quảng Trị</td>
-        <td>
-            <a href="#" class="btn btn-primary">Sửa</a>
-        </td>
-        <td>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Xóa
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>Lê Văn D</td>
-        <td>11-02-2002</td>
-        <td>Nữ</td>
-        <td>197252415</td>
-        <td>0964258741</td>
-        <td>levand@gmail.com</td>
-        <td>Silver</td>
-        <td>Đà Nẵng</td>
-        <td>
-            <a href="#" class="btn btn-primary">Sửa</a>
-        </td>
-        <td>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Xóa
-            </button>
-        </td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>Lê Văn E</td>
-        <td>11-02-2002</td>
-        <td>Nam</td>
-        <td>197252415</td>
-        <td>0964258741</td>
-        <td>levane@gmail.com</td>
-        <td>Member</td>
-        <td>Đà Nẵng</td>
-        <td>
-            <a href="#" class="btn btn-primary">Sửa</a>
-        </td>
-        <td>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Xóa
-            </button>
-        </td>
-    </tr>
-    </thead>
-</table>
+<div class="row" style="background: #addccf">
+    <div class="col-4">
+
+    </div>
+    <div class="col-4 text-center">
+        <form class="d-flex flex-column" method="post" style="width: 500px">
+            <h2 class="text-center" style="color: #212529;font-size: 20px;
+        font-weight: 500; padding: 10px 24px;">Thêm Mới Hợp Đồng</h2>
+            <input type="hidden" class="mb-3 ">
+            <label class="fw-bold">Số Hợp Đồng : </label>
+            <input class="mb-3" type="text">
+
+            <label class="fw-bold">Ngày Bắt Đầu : </label>
+            <input type="date" class="mb-3">
+
+            <label class="fw-bold">Ngày Kết Thúc :</label>
+            <input type="date" class="mb-3">
+
+            <label class="fw-bold">Số Tiền Cọc Trước :</label>
+            <input type="text" class="mb-3">
+
+            <label class="fw-bold">Tổng Số Tiền Thanh Toán :</label>
+            <input type="text" class="mb-3">
+
+        </form>
+    </div>
+    <div class="col-4">
+    </div>
+</div>
 
 <!--FOOTER-->
 <div class="row bg-dark-subtle mt-5">
@@ -233,25 +150,6 @@
                     <img src="logo/tải%20xuống%20(1).jpg" alt="" style="width: 80px">
                     <img src="logo/tải%20xuống.jpg" alt="" style="width: 80px">
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Xóa Room</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                Bạn Có Chắc Chắn Xóa Khách Hàng Này Không ?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
