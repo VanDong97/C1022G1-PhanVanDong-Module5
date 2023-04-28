@@ -2,16 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Student from './compoments/ss1/student/student';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-import SignInForm from "./compoments/ss1/signInForm/signInForm";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <SignInForm/>
-        {/*<Student />*/}
+        <App />
     </React.StrictMode>
 );
 
