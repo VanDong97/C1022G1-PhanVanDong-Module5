@@ -11,4 +11,4 @@ function ss1() {
     );
 }
 
-export default ss1();
+export default ss1;
