@@ -2,7 +2,7 @@ import './App.css';
 import Header from "./component/2-1-2/header";
 import React from "react";
 import Footer from "./component/2-1-2/footer";
-import Home from "./component/2-1-2/home";
+import {Home} from "./component/2-1-2/home";
 import EditService from "./component/2-3/editService";
 import CreateService from "./component/2-4/createService";
 import ListCustomer from "./component/2-5/listCustomer";
@@ -10,6 +10,8 @@ import EditCustomer from "./component/2-6/editCustomer";
 import CreateCustomer from "./component/2-7/createCustomer";
 import CreateContract from "./component/2-8/createContract";
 import ListContract from "./component/2-9/listContract";
+import {FacilityList} from "./component/facility/facility/facility_list";
+import {CustomerList} from "./component/facility/customer/customer_list";
 
 function App() {
     return (
@@ -51,9 +53,13 @@ function App() {
             {/*<Footer/>*/}
 
             {/*2-9*/}
-            <Header/>
-            <ListContract/>
-            <Footer/>
+            {/*<Header/>*/}
+            {/*<ListContract/>*/}
+            {/*<Footer/>*/}
+
+            {<FacilityList/>}
+
+            {/*{<CustomerList/>}*/}
         </div>
     );
 }

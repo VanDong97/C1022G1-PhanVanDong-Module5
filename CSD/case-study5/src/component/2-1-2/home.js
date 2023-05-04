@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Home extends Component {
+export class Home extends Component {
     render() {
         return (
             <>
@@ -176,148 +176,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                {/*2*/}
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-4">
-                            <div className="card" style={{width: "95%"}}>
-                                <img
-                                    src="https://ariyanacentre.com/wp-content/uploads/2018/06/furama-villas-03.jpg"
-                                    className="card-img-top"
-                                    width="100%"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">LAGOON SUPERIOR</h5>
-                                    <p className="card-text">
-                                        Diện Tích : 85.5m <sup>2</sup>
-                                    </p>
-                                    <a href="#" className="btn btn-primary">
-                                        Sửa
-                                    </a>
-                                    <a href="#" className="btn btn-danger">
-                                        Xóa
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-4">
-                            <div className="card" style={{width: "95%"}}>
-                                <img
-                                    src="https://ariyanacentre.com/wp-content/uploads/2018/06/furama-villas-03.jpg"
-                                    width="100%"
-                                    className="card-img-top"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">GARDEN SUPERIOR</h5>
-                                    <p className="card-text">
-                                        Diện Tích : 80.5m <sup>2</sup>
-                                    </p>
-                                    <a href="#" className="btn btn-primary">
-                                        Sửa
-                                    </a>
-                                    <a href="#" className="btn btn-danger">
-                                        Xóa
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-4">
-                            <div className="card" style={{width: "95%"}}>
-                                <img
-                                    src="https://ariyanacentre.com/wp-content/uploads/2018/06/furama-villas-03.jpg"
-                                    width="100%"
-                                    className="card-img-top"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">GARDEN DELUXE</h5>
-                                    <p className="card-text">
-                                        Diện Tích : 81.5m <sup>2</sup>
-                                    </p>
-                                    <a href="#" className="btn btn-primary">
-                                        Sửa
-                                    </a>
-                                    <a href="#" className="btn btn-danger">
-                                        Xóa
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/*3*/}
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-4">
-                            <div className="card" style={{width: "95%"}}>
-                                <img
-                                    src="https://pauschalreisen.meiers-weltreisen.de/pibe-media/mwr_y/hotel/DAD01013-FZ_S23_22.jpg?w=744&h=358"
-                                    className="card-img-top"
-                                    width="100%"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">PRESIDENTIAL STUDIO</h5>
-                                    <p className="card-text">
-                                        Diện Tích : 85.5m <sup>2</sup>
-                                    </p>
-                                    <a href="#" className="btn btn-primary">
-                                        Sửa
-                                    </a>
-                                    <a href="#" className="btn btn-danger">
-                                        Xóa
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-4">
-                            <div className="card" style={{width: "95%"}}>
-                                <img
-                                    src="https://pauschalreisen.meiers-weltreisen.de/pibe-media/mwr_y/hotel/DAD01013-FZ_S23_22.jpg?w=744&h=358"
-                                    width="100%"
-                                    className="card-img-top"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">BEACH FRONT VILLAS</h5>
-                                    <p className="card-text">
-                                        Diện Tích : 80.5m <sup>2</sup>
-                                    </p>
-                                    <a href="#" className="btn btn-primary">
-                                        Sửa
-                                    </a>
-                                    <a href="#" className="btn btn-danger">
-                                        Xóa
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-4">
-                            <div className="card" style={{width: "95%"}}>
-                                <img
-                                    src="https://pauschalreisen.meiers-weltreisen.de/pibe-media/mwr_y/hotel/DAD01013-FZ_S23_22.jpg?w=744&h=358"
-                                    width="100%"
-                                    className="card-img-top"
-                                    alt="..."
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title">POOL VILAAS</h5>
-                                    <p className="card-text">
-                                        Diện Tích : 81.5m <sup>2</sup>
-                                    </p>
-                                    <a href="#" className="btn btn-primary">
-                                        Sửa
-                                    </a>
-                                    <a href="#" className="btn btn-danger">
-                                        Xóa
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 {/*PAGINATION*/}
                 <div className="mt-4">
                     <nav aria-label="Page navigation example">
@@ -354,5 +213,3 @@ class Home extends Component {
         );
     }
 }
-
-export default Home;
