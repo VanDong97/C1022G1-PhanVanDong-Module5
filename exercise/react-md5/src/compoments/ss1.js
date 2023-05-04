@@ -1,8 +1,7 @@
-import student from "./student/student";
 import signInForm from "./ss1/signInForm/signInForm"
 import React from "react";
 
-function ss1() {
+export function Ss1() {
     return (
         <div>
             {/*{<student />}*/}
@@ -10,5 +9,3 @@ function ss1() {
         </div>
     );
 }
-
-export default ss1;

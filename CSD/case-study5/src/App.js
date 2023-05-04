@@ -7,6 +7,9 @@ import EditService from "./component/2-3/editService";
 import CreateService from "./component/2-4/createService";
 import ListCustomer from "./component/2-5/listCustomer";
 import EditCustomer from "./component/2-6/editCustomer";
+import CreateCustomer from "./component/2-7/createCustomer";
+import CreateContract from "./component/2-8/createContract";
+import ListContract from "./component/2-9/listContract";
 
 function App() {
     return (
@@ -33,8 +36,23 @@ function App() {
             {/*<Footer/>*/}
 
             {/*2-6*/}
+            {/*<Header/>*/}
+            {/*<EditCustomer/>*/}
+            {/*<Footer/>*/}
+
+            {/*2-7*/}
+            {/*<Header/>*/}
+            {/*<CreateCustomer/>*/}
+            {/*<Footer/>*/}
+
+            {/*2-8*/}
+            {/*<Header/>*/}
+            {/*<CreateContract/>*/}
+            {/*<Footer/>*/}
+
+            {/*2-9*/}
             <Header/>
-            <EditCustomer/>
+            <ListContract/>
             <Footer/>
         </div>
     );

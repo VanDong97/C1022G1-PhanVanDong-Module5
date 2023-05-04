@@ -2,7 +2,7 @@ import StudentInfo from "./ss2/studentInfo/studentInfo";
 import React from "react";
 import TodoApp from "./ss2/todoApp/todoApp";
 
-function ss2() {
+export function Ss2() {
     return (
         <div>
             {/*{<StudentInfo/>}*/}
@@ -10,5 +10,3 @@ function ss2() {
         </div>
     );
 }
-
-export default ss2;
