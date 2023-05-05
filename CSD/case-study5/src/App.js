@@ -12,6 +12,7 @@ import CreateContract from "./component/2-8/createContract";
 import ListContract from "./component/2-9/listContract";
 import {FacilityList} from "./component/facility/facility/facility_list";
 import {CustomerList} from "./component/facility/customer/customer_list";
+import {ContractList} from "./component/facility/contract/contract_list";
 
 function App() {
     return (
@@ -57,9 +58,11 @@ function App() {
             {/*<ListContract/>*/}
             {/*<Footer/>*/}
 
-            {<FacilityList/>}
+            {/*{<FacilityList/>}*/}
 
             {/*{<CustomerList/>}*/}
+
+            <ContractList/>
         </div>
     );
 }

@@ -8,13 +8,16 @@ import {ComponentCounter} from "./compoments/ss3/componentCounter/componentCount
 import {Ss3} from "./compoments/ss3";
 import {Ss1} from "./compoments/ss1";
 import {Ss2} from "./compoments/ss2";
+import {Ss4} from "./compoments/ss4";
+import {ToastContainer} from "react-toastify";
 
 function App() {
     return (
         <div className="App">
             {/*<Ss1/>*/}
             {/*<Ss2/>*/}
-            <Ss3/>
+            {/*<Ss3/>*/}
+            <Ss4/>
         </div>
     );
 }
