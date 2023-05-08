@@ -3,7 +3,7 @@ import Header from "./component/2-1-2/header";
 import React from "react";
 import Footer from "./component/2-1-2/footer";
 import {Home} from "./component/2-1-2/home";
-import EditService from "./component/2-3/editService";
+import {EditService} from "./component/2-3/editService";
 import CreateService from "./component/2-4/createService";
 import ListCustomer from "./component/2-5/listCustomer";
 import {EditCustomer} from "./component/2-6/editCustomer";
@@ -24,9 +24,9 @@ function App() {
 
 
             {/*2-3*/}
-            {/*<Header/>*/}
-            {/*<EditService/>*/}
-            {/*<Footer/>*/}
+            <Header/>
+            <EditService/>
+            <Footer/>
 
             {/*2-4*/}
             {/*  <Header/>*/}
@@ -44,9 +44,9 @@ function App() {
             {/*<Footer/>*/}
 
             {/*2-7*/}
-            <Header/>
-            <CreateCustomer/>
-            <Footer/>
+            {/*<Header/>*/}
+            {/*<CreateCustomer/>*/}
+            {/*<Footer/>*/}
 
             {/*2-8*/}
             {/*<Header/>*/}

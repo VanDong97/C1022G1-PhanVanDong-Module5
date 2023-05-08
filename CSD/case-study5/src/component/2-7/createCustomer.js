@@ -34,7 +34,7 @@ export function CreateCustomer() {
                 onSubmit={(values, {setSubmitting}) => {
                     setTimeout(() => {
                         setSubmitting(false)
-                        toast(`Chỉnh Sửa ${values.name} thành công !`)
+                        toast(`Thêm mới ${values.name} thành công !`)
                     }, 1500)
                 }}
             >
@@ -42,7 +42,6 @@ export function CreateCustomer() {
                     ({isSubmitting}) => (
                         <Form className='w-50 m-auto    '>
                             <div className="row" style={{background: "#addccf"}}>
-                                <div className="col-4"></div>
                                 <h2
                                     className="text-center"
                                     style={{
@@ -119,9 +118,6 @@ export function CreateCustomer() {
                                         :
                                         <button type='submit' className='btn btn-primary mt-3'>Xác Nhận</button>
                                 }
-                                <div className="col-4">
-
-                                </div>
                             </div>
                         </Form>
                     )
