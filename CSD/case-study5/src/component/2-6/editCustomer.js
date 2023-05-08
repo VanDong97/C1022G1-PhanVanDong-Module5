@@ -1,67 +1,133 @@
 import {Component} from "react";
 import React from "react";
+import * as Yup from 'yup';
+import {ErrorMessage, Field, Form, Formik} from "formik";
+import {toast} from "react-toastify";
+import {BallTriangle} from "react-loader-spinner";
 
-class EditCustomer extends Component {
-    render() {
-        return (
-            <div className="row" style={{background: "#addccf"}}>
-                <div className="col-4"></div>
-                <div className="col-4 text-center">
-                    <form className="d-flex flex-column" method="post" style={{width: 500}}>
-                        <h2
-                            className="text-center"
-                            style={{
-                                color: "#212529",
-                                fontSize: 20,
-                                fontWeight: 500,
-                                padding: "10px 24px"
-                            }}
-                        >
-                            Chỉnh Sửa Khách Hàng
-                        </h2>
-                        <input type="hidden" className="mb-3 "/>
-                        <label className="fw-bold">Điền Họ Và Tên : </label>
-                        <input className="mb-3" type="text"/>
-                        <label className="fw-bold">Điền Ngày Sinh : </label>
-                        <input type="text" className="mb-3"/>
-                        <label className="fw-bold">Điền Giới Tính :</label>
-                        <input type="text" className="mb-3"/>
-                        <label className="fw-bold">Điền Số CMND :</label>
-                        <input type="text" className="mb-3"/>
-                        <label className="fw-bold">Điền SDT :</label>
-                        <input type="text" className="mb-3"/>
-                        <label className="fw-bold">Điền Email :</label>
-                        <input type="text" className="mb-3"/>
-                        <select
-                            className="fw-bold form-select form-select-sm"
-                            aria-label=".form-select-sm example"
-                        >
-                            <option selected="">Loại Khách</option>
-                            <option value={1}>Diamond</option>
-                            <option value={2}>Platinium</option>
-                            <option value={3}>Gold</option>
-                            <option value={4}>Silver</option>
-                            <option value={5}>Member</option>
-                        </select>
-                        <label className="fw-bold">Điền Địa Chỉ :</label>
-                        <input type="text" className="mb-3"/>
-                        <div className="mt-3">
-                            <input
-                                type="submit"
-                                className="btn btn-danger fw-bold"
-                                defaultValue="Xác Nhận"
-                            />
-                            <button type="button" className="btn btn-secondary">
-                                Hủy Bỏ
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div className="col-4"></div>
-            </div>
+export function EditCustomer() {
+    return (
+        <>
+            <Formik
+                initialValues={{
+                    name: '',
+                    dateOfBirth: '',
+                    gender: ['Nam', 'Nữ'],
+                    cmnd: '',
+                    phoneNumber: '',
+                    email: '',
+                    customerType: '',
+                    address: ''
+                }}
+                validationSchema={Yup.object({
+                    name: Yup.string()
+                        .required("Vui lòng nhập tên"),
+                    cmnd: Yup.number().integer()
+                        .required("Vui lòng nhập số chứng minh nhân dân"),
+                    email: Yup.string()
+                        .required("Vui lòng nhập Email")
+                        .matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, "Vui lòng nhập email theo định dạng abc@gmail.com"),
+                    phoneNumber: Yup.number().integer()
+                        .required("Vui lòng nhập số điện thoại"),
+                    address: Yup.string()
+                        .required("Vui lòng nhập địa chỉ")
+                })}
+                onSubmit={(values, {setSubmitting}) => {
+                    setTimeout(() => {
+                        setSubmitting(false)
+                        toast(`Chỉnh Sửa ${values.name} thành công !`)
+                    }, 1500)
+                }}
+            >
+                {
+                    ({isSubmitting}) => (
+                        <Form className='w-50 m-auto    '>
+                            <div className="row" style={{background: "#addccf"}}>
+                                <div className="col-4"></div>
+                                <h2
+                                    className="text-center"
+                                    style={{
+                                        color: "#212529",
+                                        fontSize: 20,
+                                        fontWeight: 500,
+                                        padding: "10px 24px"
+                                    }}
+                                >
+                                    Chỉnh Sửa Khách Hàng
+                                </h2>
+                                <Field type="hidden" className="mb-3 "/>
 
-        );
-    }
+                                <label className="fw-bold">Điền Họ Và Tên : </label>
+                                <Field className="mb-3" id='name' name='name' type="text"/>
+                                <ErrorMessage name='name' component='span' className='form-err'/>
+
+                                <label className="fw-bold">Điền Ngày Sinh : </label>
+                                <Field type="date" id='dateOfBirth' name='dateOfBirth' className="mb-3"/>
+
+                                <div className='mt-3'>
+                                    <label htmlFor="gender" className='form-label mt-3'>Giới Tính</label>
+                                    <div className='form-check form-check-inline'>
+                                        <Field className='form-check-input' type="radio" name="gender" id="gender"
+                                               value='0'/>
+                                        <label htmlFor="inlineRadio1" className="form-check-label">Nam</label>
+                                    </div>
+                                    <div className='form-check form-check-inline'>
+                                        <Field className='form-check-input' type="radio" name="gender" id="gender"
+                                               value='1'/>
+                                        <label htmlFor="inlineRadio2" className="form-check-label">Nữ</label>
+                                    </div>
+                                </div>
+
+                                <label className="fw-bold">Điền Số CMND :</label>
+                                <Field type="text" className="mb-3" name='cmnd'/>
+                                <ErrorMessage name='cmnd' component='span' className='form-err'/>
+
+                                <label className="fw-bold">Điền SDT :</label>
+                                <Field type="text" className="mb-3" name='phoneNumber'/>
+                                <ErrorMessage name='phoneNumber' component='span' className='form-err'/>
+
+                                <label className="fw-bold">Điền Email :</label>
+                                <Field type="text" className="mb-3" name='email'/>
+                                <ErrorMessage name='email' component='span' className='form-err'/>
+
+                                <select
+                                    className="fw-bold form-select form-select-sm"
+                                    aria-label=".form-select-sm example"
+                                >
+                                    <option selected="">Loại Khách</option>
+                                    <option value={1}>Diamond</option>
+                                    <option value={2}>Platinium</option>
+                                    <option value={3}>Gold</option>
+                                    <option value={4}>Silver</option>
+                                    <option value={5}>Member</option>
+                                </select>
+
+                                <label className="fw-bold">Điền Địa Chỉ :</label>
+                                <Field type="text" className="mb-3" name='address'/>
+                                <ErrorMessage name='address' component='span' className='form-err'/>
+                                {
+                                    isSubmitting ?
+                                        <BallTriangle
+                                            height={100}
+                                            width={100}
+                                            radius={5}
+                                            color="#4fa94d"
+                                            ariaLabel="ball-triangle-loading"
+                                            wrapperClass={{}}
+                                            wrapperStyle=""
+                                            visible={true}
+                                        />
+                                        :
+                                        <button type='submit' className='btn btn-primary mt-3'>Xác Nhận</button>
+                                }
+                                <div className="col-4">
+
+                                </div>
+                            </div>
+                        </Form>
+                    )
+                }
+            </Formik>
+        </>
+    )
 }
-
-export default EditCustomer;

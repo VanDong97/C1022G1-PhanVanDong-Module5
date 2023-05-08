@@ -6,8 +6,8 @@ import {Home} from "./component/2-1-2/home";
 import EditService from "./component/2-3/editService";
 import CreateService from "./component/2-4/createService";
 import ListCustomer from "./component/2-5/listCustomer";
-import EditCustomer from "./component/2-6/editCustomer";
-import CreateCustomer from "./component/2-7/createCustomer";
+import {EditCustomer} from "./component/2-6/editCustomer";
+import {CreateCustomer} from "./component/2-7/createCustomer";
 import CreateContract from "./component/2-8/createContract";
 import ListContract from "./component/2-9/listContract";
 import {FacilityList} from "./component/facility/facility/facility_list";
@@ -44,9 +44,9 @@ function App() {
             {/*<Footer/>*/}
 
             {/*2-7*/}
-            {/*<Header/>*/}
-            {/*<CreateCustomer/>*/}
-            {/*<Footer/>*/}
+            <Header/>
+            <CreateCustomer/>
+            <Footer/>
 
             {/*2-8*/}
             {/*<Header/>*/}
@@ -62,7 +62,7 @@ function App() {
 
             {/*{<CustomerList/>}*/}
 
-            <ContractList/>
+            {/*<ContractList/>*/}
         </div>
     );
 }
