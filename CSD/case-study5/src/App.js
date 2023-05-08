@@ -24,9 +24,9 @@ function App() {
 
 
             {/*2-3*/}
-            <Header/>
-            <EditService/>
-            <Footer/>
+            {/*<Header/>*/}
+            {/*<EditService/>*/}
+            {/*<Footer/>*/}
 
             {/*2-4*/}
             {/*  <Header/>*/}
@@ -62,7 +62,7 @@ function App() {
 
             {/*{<CustomerList/>}*/}
 
-            {/*<ContractList/>*/}
+            <ContractList/>
         </div>
     );
 }

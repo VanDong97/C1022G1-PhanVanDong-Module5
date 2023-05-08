@@ -22,9 +22,7 @@ export function ContactForm() {
                         .required("Vui lòng nhập email.")
                         .matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, "Vui lòng nhập email theo định dạng abc@gmail.com"),
                     phone: Yup.number().integer()
-                        .required("Vui lòng nhập số điện thoại"),
-                    message: Yup.string()
-                        .required("Vui lòng nhập tin nhắn mới gửi đi")
+                        .required("Vui lòng nhập số điện thoại")
                 })}
                 onSubmit={(values, {setSubmitting}) => {
                     setTimeout(() => {
@@ -56,7 +54,6 @@ export function ContactForm() {
                                 <div className='mt-3'>
                                     <label htmlFor="message" className='form-label'>Message</label>
                                     <Field type='text' className='form-control' id='message' name='message'/>
-                                    <ErrorMessage name='message' component='span' className='form-err'/>
                                 </div>
                                 {
                                     isSubmitting ?

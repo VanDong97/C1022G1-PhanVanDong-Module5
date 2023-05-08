@@ -10,7 +10,7 @@ export function MedicalForm() {
             <Formik
                 initialValues={{
                     name: '',
-                    cmnd: '',
+                    identityCard: '',
                     dateOfBirth: '',
                     gender: ['Nam', 'Nữ'],
                     nationality: '',
@@ -29,7 +29,7 @@ export function MedicalForm() {
                 validationSchema={Yup.object({
                     name: Yup.string()
                         .required("Vui lòng nhập tên!"),
-                    cmnd: Yup.number().integer()
+                    identityCard: Yup.number().integer()
                         .required("Vui lòng nhập số CMND !"),
                     dateOfBirth: Yup.date()
                         .required("Vui lòng nhập ngày tháng năm sinh !"),
@@ -67,9 +67,9 @@ export function MedicalForm() {
                                     <ErrorMessage name='name' component='span' className='form-err'/>
                                 </div>
                                 <div className='mt-3'>
-                                    <label htmlFor="cmnd" className='form-label'>Số Hộ Chiếu/CMND</label>
-                                    <Field type='text' className='form-control' id='cmnd' name='cmnd'/>
-                                    <ErrorMessage name='cmnd' component='span' className='form-err'/>
+                                    <label htmlFor="identityCard" className='form-label'>Số Hộ Chiếu/CMND</label>
+                                    <Field type='text' className='form-control' id='identityCard' name='identityCard'/>
+                                    <ErrorMessage name='identityCard' component='span' className='form-err'/>
                                 </div>
                                 <div className='mt-3'>
                                     <label htmlFor="dateOfBirth" className='form-label'>Năm Sinh</label>

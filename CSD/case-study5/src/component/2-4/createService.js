@@ -48,11 +48,11 @@ export function CreateService() {
                                         padding: "10px 24px"
                                     }}
                                 >
-                                    Thêm Mới Room
+                                    Thêm Mới Dịch Vụ
                                 </h2>
                                 <Field type="hidden" className="mb-3 username"/>
 
-                                <label className="fw-bold">Điền Tên Room : </label>
+                                <label className="fw-bold">Điền Tên Dịch Vụ : </label>
                                 <Field className="mb-3" name='name' type="text"/>
                                 <ErrorMessage name='name' component='span' className='form-err'/>
 
