@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
 import * as bookService from "../../../service/bookService";
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 export function BookList() {
     const [book, setBook] = useState([]);
+    const [deletedId,setDeletedId] = useState();
     useEffect(() => {
         const fetchApi = async () => {
             const result = await bookService.findAll();
@@ -11,13 +12,14 @@ export function BookList() {
 
         }
         fetchApi();
-    }, []);
+    }, [deletedId]);
     const handleDeleteBook = async (id) => {
-        const result2 = await bookService.findById(id);
-        setBook(result2);
+        console.log(id)
+        setDeletedId(id)
     }
     const handleDelete = async () => {
-        await bookService.deleteBook(book.id);
+        await bookService.deleteBook(deletedId);
+        setBook(await bookService.findAll());
     }
     return (
         <>
@@ -39,10 +41,10 @@ export function BookList() {
                                 <th scope="row">{books.title}</th>
                                 <td>{books.quantity}</td>
                                 <td>
-                                    <NavLink to={`/edit/${books.id}`} type="button"
-                                             className="btn btn-primary m-1">Edit</NavLink>
+                                    <Link to={`/edit/${books.id}`} type="button"
+                                             className="btn btn-primary m-1">Edit</Link>
                                     <button type="button" className="btn btn-danger" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal" onClick={() => handleDeleteBook(book.id)}>
+                                            data-bs-target="#exampleModal" onClick={() => handleDeleteBook(books.id)}>
                                         Xóa
                                     </button>
                                 </td>
@@ -66,7 +68,7 @@ export function BookList() {
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Hủy Bỏ</button>
-                            <button onClick={() => handleDelete()} type="button" className="btn btn-primary">Xóa
+                            <button onClick={() => handleDelete()} type="button" className="btn btn-primary" data-bs-dismiss="modal">Xóa
                             </button>
                         </div>
                     </div>

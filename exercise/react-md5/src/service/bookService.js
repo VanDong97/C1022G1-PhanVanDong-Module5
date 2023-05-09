@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const findAll = async () => {
     try {
-        const result = await axios.get('https://my-json-server.typicode.com/codegym-vn/mock-api-books/books');
+        const result = await axios.get('http://localhost:8080/book');
         return result.data
     } catch (error) {
 
@@ -10,21 +10,21 @@ export const findAll = async () => {
 }
 export const createBook = async (bookList) => {
     try {
-        await axios.post('https://my-json-server.typicode.com/codegym-vn/mock-api-books/books', {...bookList});
+        await axios.post('http://localhost:8080/book', {...bookList});
     } catch (error) {
 
     }
 }
-export const edit = async (bookList, id) => {
+export const edit = async (book) => {
     try {
-        await axios.put(`https://my-json-server.typicode.com/codegym-vn/mock-api-books/books/${id}`, {...bookList})
+        await axios.put(`http://localhost:8080/book/${book.id}`, {...book})
     } catch (error) {
-
+        console.log(error)
     }
 }
 export const findById = async (id) => {
     try {
-        const result = await axios.get(`https://my-json-server.typicode.com/codegym-vn/mock-api-books/books/${id}`);
+        const result = await axios.get(`http://localhost:8080/book/${id}`);
         return result.data;
     } catch (error) {
 
@@ -32,8 +32,9 @@ export const findById = async (id) => {
 }
 export const deleteBook = async (id) => {
     try {
-        await axios.delete(`https://my-json-server.typicode.com/codegym-vn/mock-api-books/books/${id}`)
+        await axios.delete(`http://localhost:8080/book/${id}`)
+        alert("Xóa thành công")
     } catch (error) {
-
+        console.log(error)
     }
 }

@@ -31,8 +31,9 @@ export function MedicalForm() {
                         .required("Vui lòng nhập tên!"),
                     identityCard: Yup.number().integer()
                         .required("Vui lòng nhập số CMND !"),
-                    dateOfBirth: Yup.date()
-                        .required("Vui lòng nhập ngày tháng năm sinh !"),
+                    dateOfBirth: Yup.string()
+                        .required("Vui lòng nhập ngày tháng năm sinh !")
+                        .matches(/^(19\d{2}|[2-9]\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[1-2]\d|3[0-1])$/,"Vui lòng nhập năm sinh trên 1900"),
                     nationality: Yup.string()
                         .required("Vui lòng nhập quốc tịch !"),
                     city: Yup.string()

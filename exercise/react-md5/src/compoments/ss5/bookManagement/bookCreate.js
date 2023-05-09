@@ -12,10 +12,9 @@ export function BookCreate() {
                     title: '',
                     quantity: ''
                 }}
-                onSubmit={(values, {setSubmitting}) => {
+                onSubmit={values => {
                     const create = async () => {
                         await bookService.createBook(values)
-                        setSubmitting(false)
                         alert("Thêm mới thành công")
                         navigate('/');
                     }

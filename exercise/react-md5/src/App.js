@@ -20,11 +20,11 @@ import {BookEdit} from "./compoments/ss5/bookManagement/bookEdit";
 export  default function App() {
     return (
         <>
-            <Routes>
-                <Route path='/' element={<BookList/>}/>
-                <Route path='/create' element={<BookCreate/>}/>
-                <Route path='/edit/:id' element={<BookEdit />} />
-            </Routes>
+            {/*<Routes>*/}
+            {/*    <Route path='/' element={<BookList/>}/>*/}
+            {/*    <Route path='/create' element={<BookCreate/>}/>*/}
+            {/*    <Route path='/edit/:id' element={<BookEdit />} />*/}
+            {/*</Routes>*/}
             {/*// <div className="App">*/}
             {/*// /!*<Ss1/>*!/*/}
             {/*// /!*<Ss2/>*!/*/}

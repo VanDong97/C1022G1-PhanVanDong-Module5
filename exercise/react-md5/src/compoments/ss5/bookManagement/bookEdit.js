@@ -19,13 +19,13 @@ export function BookEdit() {
         <>
             <Formik
                 initialValues={{
+                    id : book?.id,
                     title: book?.title,
                     quantity: book?.quantity
                 }}
-                onSubmit={(values, {setSubmitting}) => {
+                onSubmit={(values) => {
                     const edit = async () => {
-                        await bookService.edit(book?.id, {...values});
-                        setSubmitting(false);
+                        await bookService.edit(values);
                         alert("Chỉnh Sửa Thành Công");
                         navigate('/');
                     };

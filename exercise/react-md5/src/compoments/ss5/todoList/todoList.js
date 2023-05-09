@@ -16,7 +16,7 @@ export function ToDoList() {
             <ul>
                 {
                     todoList.map((todo) => (
-                            <li>{todo.title}</li>
+                            <li>{todo?.title}</li>
                         )
                     )
                 }
