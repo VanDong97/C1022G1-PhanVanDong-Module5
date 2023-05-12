@@ -1,9 +1,18 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {facility} from "./facility";
 import Header from "../../2-1-2/header";
 import Footer from "../../2-1-2/footer";
+import * as facilityService from "../../../service/facilityService";
 
 export function FacilityList() {
+    const [facility, setFacility] = useState([]);
+    useEffect(() => {
+        const fetchApi = async () => {
+            const result = await facilityService.findAll();
+            setFacility(result);
+        }
+        fetchApi();
+    },[])
     return (
         <>
             <Header/>

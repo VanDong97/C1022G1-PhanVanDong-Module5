@@ -13,58 +13,28 @@ import ListContract from "./component/2-9/listContract";
 import {FacilityList} from "./component/facility/facility/facility_list";
 import {CustomerList} from "./component/facility/customer/customer_list";
 import {ContractList} from "./component/facility/contract/contract_list";
+import {CustomerCreate} from "./component/facility/customer/customer_create";
+import {Route, Routes} from "react-router";
+import {CustomerEdit} from "./component/facility/customer/customer_edit";
+import {ContractCreate} from "./component/facility/contract/contract_create";
+import {ContractEdit} from "./component/facility/contract/contract_edit";
 
-function App() {
+export function App() {
     return (
-        <div>
-            {/*2-1-2*/}
-            {/*<Header/>*/}
-            {/*<Home/>*/}
-            {/*<Footer/>*/}
+        <>
 
+            {/*<Routes>*/}
+            {/*    <Route path='/' element={<CustomerList/>}/>*/}
+            {/*    <Route path='/createCustomer' element={<CustomerCreate/>}/>*/}
+            {/*    <Route path='/editCustomer/:id' element={<CustomerEdit/>}/>*/}
+            {/*</Routes>*/}
 
-            {/*2-3*/}
-            {/*<Header/>*/}
-            {/*<EditService/>*/}
-            {/*<Footer/>*/}
-
-            {/*2-4*/}
-            {/*  <Header/>*/}
-            {/*  <CreateService/>*/}
-            {/*  <Footer/>*/}
-
-            {/*2-5*/}
-            {/*<Header/>*/}
-            {/*<ListCustomer/>*/}
-            {/*<Footer/>*/}
-
-            {/*2-6*/}
-            {/*<Header/>*/}
-            {/*<EditCustomer/>*/}
-            {/*<Footer/>*/}
-
-            {/*2-7*/}
-            {/*<Header/>*/}
-            {/*<CreateCustomer/>*/}
-            {/*<Footer/>*/}
-
-            {/*2-8*/}
-            {/*<Header/>*/}
-            {/*<CreateContract/>*/}
-            {/*<Footer/>*/}
-
-            {/*2-9*/}
-            {/*<Header/>*/}
-            {/*<ListContract/>*/}
-            {/*<Footer/>*/}
-
-            {/*{<FacilityList/>}*/}
-
-            {/*{<CustomerList/>}*/}
-
-            <ContractList/>
-        </div>
+            <Routes>
+                <Route path='/' element={<ContractList/> }/>
+                <Route path='/createContract' element={<ContractCreate/> } />
+                <Route path='/editContract/:id' element={<ContractEdit/> } />
+            </Routes>
+        </>
     );
 }
-
 export default App;

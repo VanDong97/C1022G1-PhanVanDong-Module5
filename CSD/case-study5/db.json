@@ -1,0 +1,275 @@
+{
+  "contract": [
+    {
+      "id": 2,
+      "shd": "HD-234",
+      "dateStart": "12-02-2023",
+      "dateEnd": "12-03-2023",
+      "deposit": "11.000.000",
+      "totalMoney": "22.000.000"
+    },
+    {
+      "shd": "HD-344",
+      "dateStart": "13-02-2023",
+      "dateEnd": "13-03-2023",
+      "deposit": "12000000",
+      "totalMoney": "24000000",
+      "startDate": "2023-05-24",
+      "endDate": "2023-05-17",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "shd": "HD-456",
+      "dateStart": "14-02-2023",
+      "dateEnd": "14-03-2023",
+      "deposit": "14.000.000",
+      "totalMoney": "28.000.000"
+    },
+    {
+      "id": 5,
+      "shd": "HD-567",
+      "dateStart": "15-02-2023",
+      "dateEnd": "15-03-2023",
+      "deposit": "15.000.000",
+      "totalMoney": "30.000.000"
+    }
+  ],
+  "customer": [
+    {
+      "id": 2,
+      "name": "Lê Văn B",
+      "dateOfBirth": "11-02-2002",
+      "gender": "Nam",
+      "cmnd": "197252415",
+      "phoneNumber": "0964258741",
+      "email": "levanb@gmail.com",
+      "customerType": "2",
+      "address": "Huế"
+    },
+    {
+      "id": 3,
+      "name": "Lê Văn C",
+      "dateOfBirth": "11-02-2002",
+      "gender": "Nữ",
+      "cmnd": "197252415",
+      "phoneNumber": "0964258741",
+      "email": "levanc@gmail.com",
+      "customerType": "3",
+      "address": "Quảng Trị"
+    },
+    {
+      "id": 4,
+      "name": "Lê Văn D",
+      "dateOfBirth": "11-02-2002",
+      "gender": "Nam",
+      "cmnd": "197252415",
+      "phoneNumber": "0964258741",
+      "email": "levand@gmail.com",
+      "customerType": "4",
+      "address": "Quảng Ngãi"
+    },
+    {
+      "id": 5,
+      "name": "Lê Văn E",
+      "dateOfBirth": "11-02-2002",
+      "gender": "Nữ",
+      "cmnd": "197252415",
+      "phoneNumber": "0964258741",
+      "email": "levane@gmail.com",
+      "customerType": "5",
+      "address": "Đà Nẵng"
+    },
+    {
+      "name": "Phan Văn Tài",
+      "dateOfBirth": "2023-05-23",
+      "gender": "0",
+      "cmnd": "1973534206",
+      "phoneNumber": "0987787787",
+      "email": "apprenticeship@gmail.com",
+      "customerType": "3",
+      "address": "da nang",
+      "id": 12
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "facility": [
+    {
+      "name": "VL-123",
+      "acreage": "100m2",
+      "img": "https://pauschalreisen.meiers-weltreisen.de/pibe-media/mwr_y/hotel/DAD01013-FZ_S23_22.jpg?w=744&h=358",
+      "rentalCost": "20.000.000",
+      "quantity": "5",
+      "rentalType": "năm",
+      "standard": "4 sao",
+      "status": "Đầy đủ tiện nghi",
+      "acreagePool": "10m2",
+      "numberOfFloors": "3",
+      "serviceId": "null"
+    },
+    {
+      "name": "VL-234",
+      "acreage": "110m2",
+      "img": "https://pauschalreisen.meiers-weltreisen.de/pibe-media/mwr_y/hotel/DAD01013-FZ_S23_22.jpg?w=744&h=358",
+      "rentalCost": "25.000.000",
+      "quantity": "6",
+      "rentalType": "tháng",
+      "standard": "5 sao",
+      "status": "Đầy đủ tiện nghi",
+      "acreagePool": "15m2",
+      "numberOfFloors": "4",
+      "serviceId": "null"
+    },
+    {
+      "name": "VL-345",
+      "acreage": "90m2",
+      "img": "https://pauschalreisen.meiers-weltreisen.de/pibe-media/mwr_y/hotel/DAD01013-FZ_S23_22.jpg?w=744&h=358",
+      "rentalCost": "15.000.000",
+      "quantity": "3",
+      "rentalType": "ngày",
+      "standard": "4 sao",
+      "status": "Đầy đủ tiện nghi",
+      "acreagePool": "10m2",
+      "numberOfFloors": "3",
+      "serviceId": "null"
+    },
+    {
+      "name": "VL-456",
+      "acreage": "80m2",
+      "img": "https://ariyanacentre.com/wp-content/uploads/2018/06/furama-villas-03.jpg",
+      "rentalCost": "20.000.000",
+      "quantity": "4",
+      "rentalType": "giờ",
+      "standard": "5 sao",
+      "status": "Đầy đủ tiện nghi",
+      "acreagePool": "10m2",
+      "numberOfFloors": "4",
+      "serviceId": "null"
+    },
+    {
+      "name": "HO-123",
+      "acreage": "80m2",
+      "img": "https://ariyanacentre.com/wp-content/uploads/2018/06/furama-villas-03.jpg",
+      "rentalCost": "20.000.000",
+      "quantity": "4",
+      "rentalType": "năm",
+      "standard": "5 sao",
+      "status": "Đầy đủ tiện nghi",
+      "acreagePool": "null",
+      "numberOfFloors": "4",
+      "serviceId": "null"
+    },
+    {
+      "name": "HO-234",
+      "acreage": "100m2",
+      "img": "https://ariyanacentre.com/wp-content/uploads/2018/06/furama-villas-03.jpg",
+      "rentalCost": "25.000.000",
+      "quantity": "5",
+      "rentalType": "tháng",
+      "standard": "5 sao",
+      "status": "Đầy đủ tiện nghi",
+      "acreagePool": "null",
+      "numberOfFloors": "5",
+      "serviceId": "null"
+    },
+    {
+      "name": "HO-345",
+      "acreage": "90m2",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Ocean-Studio-Suite.jpg",
+      "rentalCost": "18.000.000",
+      "quantity": "5",
+      "rentalType": "ngày",
+      "standard": "4 sao",
+      "status": "Đầy đủ tiện nghi",
+      "acreagePool": "null",
+      "numberOfFloors": "3",
+      "serviceId": "null"
+    },
+    {
+      "name": "HO-456",
+      "acreage": "70m2",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Ocean-Studio-Suite.jpg",
+      "rentalCost": "15.000.000",
+      "quantity": "3",
+      "rentalType": "giờ",
+      "standard": "5 sao",
+      "status": "Đầy đủ tiện nghi",
+      "acreagePool": "null",
+      "numberOfFloors": "3",
+      "serviceId": "null"
+    },
+    {
+      "name": "RO-123",
+      "acreage": "30m2",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/11/Vietnam_Danang_Furama_Ocean-Studio-Suite.jpg",
+      "rentalCost": "7.000.000",
+      "quantity": "3",
+      "rentalType": "năm",
+      "standard": "null",
+      "status": "null",
+      "acreagePool": "null",
+      "numberOfFloors": "null",
+      "serviceId": "1"
+    },
+    {
+      "name": "RO-234",
+      "acreage": "40m2",
+      "img": "https://ariyanacentre.com/wp-content/uploads/2018/06/furama-villas-03.jpg",
+      "rentalCost": "10.000.000",
+      "quantity": "4",
+      "rentalType": "tháng",
+      "standard": "null",
+      "status": "null",
+      "acreagePool": "null",
+      "numberOfFloors": "null",
+      "serviceId": "2"
+    },
+    {
+      "name": "RO-345",
+      "acreage": "35m2",
+      "img": "https://ariyanacentre.com/wp-content/uploads/2018/06/furama-villas-03.jpg",
+      "rentalCost": "6.000.000",
+      "quantity": "4",
+      "rentalType": "ngày",
+      "standard": "null",
+      "status": "null",
+      "acreagePool": "null",
+      "numberOfFloors": "null",
+      "serviceId": "3"
+    },
+    {
+      "name": "RO-456",
+      "acreage": "30m2",
+      "img": "https://ariyanacentre.com/wp-content/uploads/2018/06/furama-villas-03.jpg",
+      "rentalCost": "7.000.000",
+      "quantity": "3",
+      "rentalType": "giờ",
+      "standard": "null",
+      "status": "null",
+      "acreagePool": "null",
+      "numberOfFloors": "null",
+      "serviceId": "4"
+    }
+  ]
+}
