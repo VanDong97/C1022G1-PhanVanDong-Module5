@@ -1,0 +1,46 @@
+{
+  "product": [
+    {
+      "id": 2,
+      "name": "Quần",
+      "date": "2023-05-10",
+      "quantity": "9",
+      "productType": "2"
+    },
+    {
+      "id": 3,
+      "name": "Quần Da",
+      "date": "17/12/2022",
+      "quantity": "11",
+      "productType": "2"
+    },
+    {
+      "id": 4,
+      "name": "Quần Jean",
+      "date": "2023-05-25",
+      "quantity": "15",
+      "productType": "2"
+    },
+    {
+      "id": 5,
+      "name": "Khải Chó",
+      "date": "2023-05-16",
+      "quantity": "1",
+      "productType": "2"
+    }
+  ],
+  "productType": [
+    {
+      "id": 1,
+      "name": "Áo"
+    },
+    {
+      "id": 2,
+      "name": "Quần"
+    },
+    {
+      "id": 3,
+      "name": "Quầnrrr"
+    }
+  ]
+}

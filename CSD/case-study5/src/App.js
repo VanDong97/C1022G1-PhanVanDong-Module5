@@ -29,11 +29,12 @@ export function App() {
             {/*    <Route path='/editCustomer/:id' element={<CustomerEdit/>}/>*/}
             {/*</Routes>*/}
 
-            <Routes>
-                <Route path='/' element={<ContractList/> }/>
-                <Route path='/createContract' element={<ContractCreate/> } />
-                <Route path='/editContract/:id' element={<ContractEdit/> } />
-            </Routes>
+            {/*<Routes>*/}
+            {/*    <Route path='/' element={<ContractList/> }/>*/}
+            {/*    <Route path='/createContract' element={<ContractCreate/> } />*/}
+            {/*    <Route path='/editContract/:id' element={<ContractEdit/> } />*/}
+            {/*</Routes>*/}
+            <FacilityList/>
         </>
     );
 }
