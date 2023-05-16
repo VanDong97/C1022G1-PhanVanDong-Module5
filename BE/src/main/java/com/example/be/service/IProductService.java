@@ -10,7 +10,9 @@ import java.util.Optional;
 
 public interface IProductService {
 
-    Page<ProductDTO> findAll(String name , Pageable pageable);
-
-    Optional<Product> findById(int id);
+    Page<ProductDTO> findProductByName(Pageable pageable, String name);
+    void addProduct(ProductDTO productDTO);
+    void delete (Integer id);
+    ProductDTO findById(Integer id);
+    void update(ProductDTO productDTO);
 }

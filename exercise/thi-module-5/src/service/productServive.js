@@ -1,18 +1,47 @@
-import request from "../config/http"
-const findAll = () => {
-    return request.get(`/product`)
+import axios from "axios";
+
+export const findAll = async ({page , name}) => {
+    try {
+        const result = await  axios.get(`http://localhost:8080/product?page=${page ? page : 0}&name=${name}`);
+        return result.data
+    }catch (error) {
+        console.log(error)
+    }
 }
-const save = (product) =>{
-    return request.post(`/product`,{...product})
+export const findAllType = async () => {
+    try {
+        const result = await axios.get(`http://localhost:8080/productType`);
+        return result.data
+    } catch (err) {
+        console.log(err)
+    }
 }
-const findByName = (name) => {
-    return request.get(`/product?name_like=${name}`)
+export const findProductById = async (id) => {
+    try {
+        const result = await axios.get(`http://localhost:8080/product/${id}`);
+        return result.data
+    } catch (err) {
+        console.log(err)
+    }
 }
-const findAllType = () => {
-    return request.get(`/product-type`)
+export const editProduct = async (product) => {
+    try {
+        await axios.put(`http://localhost:8080/product`, {...product});
+    } catch (err) {
+        console.log(err)
+    }
 }
-const productService = {
-    findAll,save,findByName,
-    findAllType
+export const createProduct = async (product) => {
+    try {
+        await axios.post(`http://localhost:8080/product`, {...product})
+    } catch (err) {
+        console.log(err)
+    }
 }
-export default productService;
+export const deleteProduct = async (id) => {
+    try {
+        await axios.delete(`http://localhost:8080/product/${id}`)
+    } catch (err) {
+        console.log(err)
+    }
+}

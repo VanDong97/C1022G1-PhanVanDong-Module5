@@ -1,6 +1,5 @@
 package com.example.be.controller;
 
-import com.example.be.dto.ProductTypeDTO;
 import com.example.be.model.ProductType;
 import com.example.be.service.IProductTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +18,6 @@ public class ProductTypeController {
     private IProductTypeService iProductTypeService;
     @GetMapping("")
     public List<ProductType> showListProductType(){
-        return iProductTypeService.findAll();
+        return iProductTypeService.findAllProductType();
     }
 }

@@ -1,5 +1,6 @@
 package com.example.be.dto;
 
+import com.example.be.model.ProductType;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
@@ -9,7 +10,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class ProductDTO implements Validator {
-    private int id;
+    private Integer id;
 
     @NotBlank(message = "Không được để trống !")
     @Size(max = 100,message = "Không vượt quá 100 ký tự !")
@@ -19,14 +20,14 @@ public class ProductDTO implements Validator {
 
     @NotNull(message = "Không được để trống !")
     @Pattern(regexp = "^[0-9]+$", message = "Số lượng phải là số nguyên dương")
-    private String quantity;
+    private Integer quantity;
 
-    private ProductTypeDTO productType;
+    private ProductType productType;
 
     public ProductDTO() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -50,19 +51,19 @@ public class ProductDTO implements Validator {
         this.date = date;
     }
 
-    public String getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
-    public ProductTypeDTO getProductType() {
+    public ProductType getProductType() {
         return productType;
     }
 
-    public void setProductType(ProductTypeDTO productType) {
+    public void setProductType(ProductType productType) {
         this.productType = productType;
     }
 

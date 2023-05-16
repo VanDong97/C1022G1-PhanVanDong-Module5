@@ -1,7 +1,6 @@
 package com.example.be.service.impl;
 
 import com.example.be.dto.ProductDTO;
-import com.example.be.dto.ProductTypeDTO;
 import com.example.be.model.Product;
 import com.example.be.repository.IProductRepository;
 import com.example.be.repository.IProductTypeRepository;
@@ -10,7 +9,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -26,23 +24,50 @@ public class ProductService implements IProductService {
     private IProductTypeRepository iProductTypeRepository;
 
     @Override
-    public Page<ProductDTO> findAll(String name, Pageable pageable) {
-        Page<Product> productPage = iProductRepository.findAll(name,pageable);
+    public Page<ProductDTO> findProductByName(Pageable pageable, String name) {
+        Page<Product> productPage = iProductRepository.findProductByName(pageable, name);
         List<ProductDTO> productDTOList = new ArrayList<>();
         ProductDTO productDTO;
-        for (Product product : productPage){
+        for (Product product : productPage) {
             productDTO = new ProductDTO();
-            productDTO.setProductType(new ProductTypeDTO());
-            BeanUtils.copyProperties(product.getProductType(),productDTO.getProductType());
-            BeanUtils.copyProperties(product,productDTO);
+            BeanUtils.copyProperties(product, productDTO);
             productDTOList.add(productDTO);
         }
-        return new PageImpl<>(productDTOList,pageable,productPage.getTotalElements());
+        return new PageImpl<>(productDTOList, pageable, productPage.getTotalElements());
     }
 
+    @Override
+    public void addProduct(ProductDTO productDTO) {
+        Product product = new Product();
+        BeanUtils.copyProperties(productDTO, product);
+        iProductRepository.addProduct(product.getDate(),
+                product.getName(),
+                Integer.valueOf(product.getQuantity()),
+                product.getProductType().getId());
+    }
 
     @Override
-    public Optional<Product> findById(int id) {
-        return iProductRepository.findById(id);
+    public void delete(Integer id) {
+        iProductRepository.deleteProduct(id);
+    }
+
+    @Override
+    public ProductDTO findById(Integer id) {
+        Product product = iProductRepository.findProductById(id);
+        ProductDTO productDTO = new ProductDTO();
+        BeanUtils.copyProperties(product, productDTO);
+        return productDTO;
+    }
+
+    @Override
+    public void update(ProductDTO productDTO) {
+        Product product = new Product();
+        BeanUtils.copyProperties(productDTO, product);
+        iProductRepository.updateProduct(
+                product.getDate(),
+                product.getName(),
+                Integer.valueOf(product.getQuantity()),
+                product.getProductType().getId(),
+                product.getId());
     }
 }

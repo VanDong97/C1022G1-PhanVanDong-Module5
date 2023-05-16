@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column(name = "name" ,nullable = false)
     private String name;
@@ -16,7 +16,7 @@ public class Product {
     private String date;
 
     @Column(name = "quantity", nullable = false)
-    private String quantity;
+    private Integer quantity;
 
     @ManyToOne
     @JoinColumn(name = "product_type" , nullable = false)
@@ -25,11 +25,11 @@ public class Product {
     public Product() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -49,11 +49,11 @@ public class Product {
         this.date = date;
     }
 
-    public String getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
